@@ -7,30 +7,28 @@ header("Content-Type:application/json");
 
 # Support GET, PUT, POST, etc with $_REQUEST
 if(!empty($_REQUEST['fib'])) {
-	$fib_in=$_REQUEST['fib'];
-	$fib = round(pow((sqrt(5)+1)/2, $n) / sqrt(5));
+        $fib_in=$_REQUEST['fib'];
 
-	if(empty($fib)) {
-		response(200,"Mandatory Value Not Found",NULL);
-		}
-	else {
-		response(200,"Fib result",$fib);
-		}
-	}
+        if(empty($fib_in)) {
+                response(200,"Mandatory Value Not Found",NULL);
+                }
+        else {
+                $fib = round(pow((sqrt(5)+1)/2, $fib_in) / sqrt(5));
+                response(200,"Fib result",$fib);
+                }
+        }
 else {
-	response(400,"Invalid Request",NULL);
-	}
+        response(400,"Invalid Request",NULL);
+        }
 
 function response($status,$status_message,$data) {
-	header("HTTP/1.1 ".$status);
-	
-	$response['status']=$status;
-	$response['status_message']=$status_message;
-	$response['data']=$data;
-	
-	$json_response = json_encode($response);
-	echo $json_response;
-	}
+        header("HTTP/1.1 ".$status);
+
+        $response['status']=$status;
+        $response['status_message']=$status_message;
+        $response['data']=$data;
+
+        $json_response = json_encode($response);
+        echo $json_response;
+        }
 ?>
-
-
