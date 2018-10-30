@@ -1,24 +1,18 @@
 <?php
 # (c) 10/2018 Hugh Buntu  hugh@sogomail.com
-# This is the entry point for requests
+# api.php - this is the entry point for requests
+# Template for handling single value requests
 
 header("Content-Type:application/json");
-# require "data.php";  # this comes later; fib is trivial and fits here
+require "data.php";
 
-# Support GET, PUT, POST, etc with $_REQUEST
-if(!empty($_REQUEST['fib'])) {
-        $fib_in=$_REQUEST['fib'];
-
-        if(empty($fib_in)) {
-                response(200,"Mandatory Value Not Found",NULL);
-                }
-        else {
-                $fib = round(pow((sqrt(5)+1)/2, $fib_in) / sqrt(5));
-                response(200,"Fib result",$fib);
-                }
-        }
-else {
-        response(400,"Invalid Request",NULL);
+$value = get_rest_req();
+if(validate_rest_req($value)) {
+	$result = process_rest_req($value);
+	response(200,"Valid Result",$result);
+	}
+else	{
+	response(400,"Invalid Request",NULL);
         }
 
 function response($status,$status_message,$data) {

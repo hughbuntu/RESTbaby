@@ -1,6 +1,25 @@
 # restbaby
 # An example, minimal REST API
 
+## Explanation
+
+This is a template to rapidly implement a simple rest interface with two
+files.
+
+api.php contains the rest interface itself
+
+data.php contains whatever functionality is required, in this example, a Fibonacci number is returned
+
+This template should make quick work of returning a result for a single input. For multiple inputs, it will start to require more work, and a fancier solution may be desirable.
+
+## Test Code
+
+The test.php module is a copy of api.php with the input hardwired. In this case, the input is 9 and the result should be 34. More involved tests can be easily constructed by adding code to iterate through various values.
+
+Run the test module as follows:
+
+hughbuntu$ php test.php
+
 ## Deploy
 
 Set up an Apache 2 server with php installed. This was developed and tested on an Apache 2.4 server with php 5. O/S distro Xubuntu v. 16.04. All installed with apt-get. In my installation, the server IP address is 192.168.77.72, used in the examples below.
