@@ -22,7 +22,7 @@ function get_rest_req() {
 # Validate Data Input
 function validate_rest_req($value) {
 	if($value < 0) {
-		response(400,"Invalid Value",NULL);
+		response(400,"Negative Value Error",NULL);
 		return(False);
 		}
 	else	{
