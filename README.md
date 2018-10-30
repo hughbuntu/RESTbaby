@@ -12,7 +12,7 @@ data.php contains whatever functionality is required, in this example, a Fibonac
 
 This template should make quick work of returning a result for a single input. For multiple inputs, it will start to require more work, and a fancier solution may be desirable.
 
-## Test Code
+## Unit Test Code
 
 The test.php module is a copy of api.php with the input hardwired. In this case, the input is 9 and the result should be 34. More involved tests can be easily constructed by adding code to iterate through various values.
 
