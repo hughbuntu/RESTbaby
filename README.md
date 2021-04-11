@@ -1,10 +1,9 @@
-# restbaby
-# An example, minimal REST API
+# RESTbaby
+# An example, minimal REST API - slightly larger version
 
 ## Explanation
 
-This is a template to rapidly implement a simple rest interface with two
-files.
+This is a template to rapidly implement a simple rest interface with two files.
 
 api.php contains the rest interface itself
 
