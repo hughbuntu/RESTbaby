@@ -1,5 +1,6 @@
-# restbaby
+# RESTbaby
 # An example, minimal REST API
+This branch will integrate REDIS memory caching
 
 ## Deploy
 
