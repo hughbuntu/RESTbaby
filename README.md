@@ -1,4 +1,4 @@
-# restbaby
+# RESTbaby
 # An example, minimal REST API
 
 ## Explanation
